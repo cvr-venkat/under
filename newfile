@@ -1,17 +1,20 @@
-   node('apache-maven') {
-    // some block
-}
+node('apache-maven') {
+
   stage('git') {
-    // some block
-}
-  git 'https://github.com/cvr-venkat/under.git' {
+
+    git 'https://github.com/cvr-venkat/under.git' 
 
   }
-     archiveArtifacts artifacts: 'target/*.jar' {
-
+     stage ('build') {
+         sh 'mvn clean package'   
      }
-       node('apache-maven,') {
-    // some block
-}
+
+}       
+   
     
-    
+
+
+
+
+
+   
