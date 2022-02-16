@@ -1,12 +1,11 @@
-node('apache-maven') {
+node('maven-project') {
     stage('git') {
     git 'https://github.com/cvr-venkat/under.git'
 }
-    stage('build'){
-    sh ' clean package '
-    sh '''
-          echo "PATH=$(PATH)"
-          echo "M2_HOME=$(M2_HOME)
-    '''              
-}
+    stage ('build'){
+        sh 'clean package'
+    }
+    stage ('archive') {
+         archive 'target/*.jar'
+    }
 }
