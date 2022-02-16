@@ -8,5 +8,8 @@ node('openjdk-11-jdk') {
 
   }
      archiveArtifacts artifacts: 'target/*.jar' {
-         
+
      }
+       node('apache-maven,') {
+    // some block
+}
