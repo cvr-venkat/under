@@ -5,7 +5,4 @@ node('maven-project') {
     stage ('build'){
         sh 'clean package'
     }
-    stage ('archive') {
-         archive 'target/*.jar'
-    }
 }
