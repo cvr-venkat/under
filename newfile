@@ -1,0 +1,12 @@
+node('openjdk-11-jdk') {
+    // some block
+}
+  stage('git') {
+    // some block
+}
+  git 'https://github.com/cvr-venkat/under.git' {
+
+  }
+     archiveArtifacts artifacts: 'target/*.jar' {
+         
+     }
