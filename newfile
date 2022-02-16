@@ -1,20 +1,8 @@
 node('apache-maven') {
-
-  stage('git') {
-
-    git 'https://github.com/cvr-venkat/under.git' 
-
-  }
-     stage ('build') {
-         sh 'mvn clean package'   
-     }
-
-}       
-   
-    
-
-
-
-
-
-   
+    stage('git') {
+    git 'https://github.com/cvr-venkat/under.git'
+}
+    stage('build'){
+    sh 'clean package'
+}
+}
