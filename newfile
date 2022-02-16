@@ -1,4 +1,4 @@
-node('openjdk-11-jdk') {
+   node('apache-maven') {
     // some block
 }
   stage('git') {
@@ -13,3 +13,5 @@ node('openjdk-11-jdk') {
        node('apache-maven,') {
     // some block
 }
+    
+    
