@@ -1,0 +1,11 @@
+node('maven-project') {
+    stage('git') {
+    git 'https://github.com/cvr-venkat/under.git'
+}
+    stage ('build'){
+        sh 'clean package'
+    }
+    stage ('archive') {
+         archive 'target/*.jar'
+    }
+}
